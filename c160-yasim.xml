@@ -11,7 +11,7 @@
 
 <airplane mass="62700">
 
-    <approach speed="95" aoa="8" fuel="0.2">
+    <approach speed="90" aoa="8" fuel="0.2">
       <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
       <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
       <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.77"/>
@@ -51,13 +51,16 @@
 	  dihedral="4"
           camber="0.1">
           <stall aoa="9.254" width="6" peak="2.5"/>
-          <flap0 start="0.023" end="0.720" lift="1.6" drag="1.6"/>
-          <flap1 start="0.720" end="1.000" lift="1.4" drag="1.3"/>
+          <flap0 start="0.023" end="0.730" lift="1.6" drag="1.6"/>
+          <spoiler start="0.4" end="0.700" lift="6.0" drag="4.0"/>
+          <flap1 start="0.730" end="1.000" lift="1.4" drag="1.3"/>
 
+          <control-input axis="/controls/flight/spoilers" control="SPOILER"/>
           <control-input axis="/controls/flight/flaps" control="FLAP0" invert="true"/>
           <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
           <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
 
+          <control-output control="SPOILER" prop="/surface-positions/speedbrake-pos-norm"/>  
           <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
           <control-output control="FLAP1" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
           <control-output control="FLAP1" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
@@ -97,55 +100,53 @@
     <!-- Informations : http://en.wikipedia.org/wiki/Rolls-Royce_Tyne
 
          Engines : Wright Rolls-Royce Tyne 22
-         Power   : 5565 ch
+         Power   : 6100 ch
          Masse   : 2489 lb (1129 kg)
          RPM     : 2400 - 2600
     -->
     <!-- Engine left -->
     <propeller x="6.033" y="5.411" z="-1.424"
                mass="2489"
-               moment="95"
+               moment="8"
                radius="2.8"
-               gear-ratio="0.5625"
-               min-rpm="900"
-               max-rpm="2600"
                cruise-speed="260"
                cruise-rpm="2400"
                cruise-power="5300"
-               cruise-alt="17000">
+               cruise-alt="17000"
+               min-rpm="100"
+               max-rpm="2300">
                <actionpt x="7.750" y="5.411" z="-1.424"/>
                <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE"/>
-               <piston-engine eng-power="5565"
-                              eng-rpm="2600">
+               <piston-engine eng-power="6100"
+                              eng-rpm="2600"
+                              alt="28000"> 
                               <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
                               <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
                               <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
                               <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-                              <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
                </piston-engine>
     </propeller>
 
     <!-- Engine right-->
     <propeller x="6.033" y="-5.411" z="-1.424"
                mass="2489"
-               moment="95"
+               moment="8"
                radius="2.8"
-               gear-ratio="0.5625"
-               min-rpm="900"
-               max-rpm="2600"
                cruise-speed="260"
                cruise-rpm="2400"
                cruise-power="5300"
-               cruise-alt="17000">
+               cruise-alt="17000"
+               min-rpm="100"
+               max-rpm="2300">
                <actionpt x="7.750" y="-5.411" z="-1.424"/>
                <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE"/>
-               <piston-engine eng-power="5565"
-                              eng-rpm="2600">
+               <piston-engine eng-power="6100"
+                              eng-rpm="2600"
+                              alt="28000"> 
                               <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
                               <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
                               <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
                               <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
-                              <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
                </piston-engine>
     </propeller>
 
@@ -153,19 +154,19 @@
     <gear x="12.970" y="0.000" z="-5.737"
           compression="0.2"
           retract-time="5"
-          spring="1.0"
+          spring="0.4"
           damp="1.50">
-          <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="-0.2" dst1="0.2"/>
+          <control-input axis="/controls/flight/rudder" control="STEER" square="true"/>
           <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
-          <control-speed control="EXTEND" transition-time="5"/>
           <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
+          <control-speed control="EXTEND" transition-time="5"/>
     </gear>
 
     <!-- Left wheel 1 -->
     <gear x="3.266" y="2.502" z="-5.802"
           compression="0.2"
           retract-time="5"
-          spring="1.0"
+          spring="0.7"
           damp="1.5"
           sfric="1.2"
           dfric="1.2">
@@ -180,7 +181,7 @@
     <gear x="1.702" y="2.502" z="-5.802"
           compression="0.2"
           retract-time="5"
-          spring="1.0"
+          spring="0.7"
           damp="1.5"
           sfric="1.2"
           dfric="1.2">
@@ -195,7 +196,7 @@
     <gear x="3.266" y="-2.502" z="-5.802"
           compression="0.2"
           retract-time="5"
-          spring="1.0"
+          spring="0.7"
           damp="1.5"
           sfric="1.2"
           dfric="1.2">
@@ -210,7 +211,7 @@
     <gear x="1.702" y="-2.502" z="-5.802"
           compression="0.2"
           retract-time="5"
-          spring="1.0"
+          spring="0.7"
           damp="1.5"
           sfric="1.2"
           dfric="1.2">

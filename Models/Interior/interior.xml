@@ -8,6 +8,10 @@
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
     <object-name>inttour</object-name>
+    <object-name>intbaieB</object-name>
+    <object-name>intbaieH</object-name>
+    <object-name>planchet</object-name>
+    <object-name>paroie</object-name>
 
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
@@ -38,6 +42,45 @@
     </offsets>
   </model>
 
+  <!-- Copilote -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -12.804 </x-m>
+      <y-m>   0.505 </y-m>
+      <z-m>  -2.659 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Commandant -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -12.154 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -2.589 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Ingénieur -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -12.464 </x-m>
+      <y-m>   0.995 </y-m>
+      <z-m>  -2.739 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Planche de bord -->
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/panel.xml</path>
@@ -47,6 +90,41 @@
       <z-m>  -2.626 </z-m>
     </offsets>
   </model>
+
+  <!-- Portes cargo arriere -->
+  <animation>
+    <type>rotate</type>
+    <object-name>intbaieB</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <factor> 40 </factor>
+    <center>
+      <x-m>  2.518 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -4.552 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>intbaieH</object-name>
+    <property>instrumentation/doors/passenger/position-norm</property>
+    <factor> 20 </factor>
+    <center>
+      <x-m> 10.735 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.775 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
 
 </PropertyList>
 

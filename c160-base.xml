@@ -58,11 +58,7 @@
       </key>
       <key>
         <name>D</name>
-        <desc>Open/Close passanger door</desc>
-      </key>
-      <key>
-        <name>e</name>
-        <desc>Guns fire</desc>
+        <desc>Open/Close passanger bay</desc>
       </key>
     </help>
 
@@ -74,9 +70,11 @@
     <engines>
       <engine n="0">
         <magnetos>0</magnetos>
+        <propeller-pitch>1.0</propeller-pitch>
       </engine>
       <engine n="1">
         <magnetos>0</magnetos>
+        <propeller-pitch>1.0</propeller-pitch>
       </engine>
     </engines>
   </controls>
@@ -84,12 +82,12 @@
   <engines>
     <engine n="0">
       <engine-num type="int">0</engine-num>
-      <rpm>500</rpm>
+      <rpm archive="y">100</rpm>
       <running>false</running>
     </engine>
     <engine n="1">
       <engine-num type="int">1</engine-num>
-      <rpm>500</rpm>
+      <rpm archive="y">100</rpm>
       <running>false</running>
     </engine>
   </engines>
