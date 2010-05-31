@@ -39,6 +39,8 @@
         <int type="int" n="3">0</int>
         <int type="int" n="4">0</int>
         <int type="int" n="5">0</int>
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
 
@@ -77,6 +79,10 @@
         <propeller-pitch>1.0</propeller-pitch>
       </engine>
     </engines>
+    <gear>
+      <brake-parking> 1 </brake-parking>
+      <gear-down> true </gear-down>
+    </gear>
   </controls>
 
   <engines>
@@ -96,12 +102,26 @@
     <keyboard include="Nasal/c160-keyboard.xml"/>
   </input>
  
+  <instrumentation>
+    <doors>
+      <crew>
+        <position-norm type="float">0</position-norm>
+      </crew>
+      <passenger>
+        <position-norm type="float">0</position-norm>
+      </passenger>
+    </doors>
+  </instrumentation>
+
   <nasal>
     <c160>
       <file>Aircraft/C-160-Transall/Nasal/doors.nas</file>
       <file>Aircraft/C-160-Transall/Nasal/liveries.nas</file>
       <file>Aircraft/C-160-Transall/Nasal/light.nas</file>
     </c160>
+    <doors>
+      <file>Aircraft/C-160-Transall/Nasal/doors.nas</file>
+    </doors>
   </nasal>
 
 </PropertyList>
