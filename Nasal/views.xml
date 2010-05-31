@@ -12,9 +12,9 @@
       <from-model type="bool">true</from-model>
       <from-model-idx type="int">0</from-model-idx>
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-      <x-offset-m archive="y">   0.505</x-offset-m>	<!-- Right -->
+      <x-offset-m archive="y">   0.509 </x-offset-m>	<!-- Right -->
       <y-offset-m archive="y">  -2.154 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -12.850 </z-offset-m>	<!-- Back  -->
+      <z-offset-m archive="y"> -13.250 </z-offset-m>	<!-- Back  -->
       <pitch-offset-deg> -5 </pitch-offset-deg>
       <default-field-of-view-deg> 70 </default-field-of-view-deg>
     </config>
@@ -30,7 +30,7 @@
       <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
       <x-offset-m archive="y">   0.000</x-offset-m>	<!-- Right -->
       <y-offset-m archive="y">  -2.154 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -12.200 </z-offset-m>	<!-- Back  -->
+      <z-offset-m archive="y"> -12.500 </z-offset-m>	<!-- Back  -->
       <pitch-offset-deg> 0 </pitch-offset-deg>
       <default-field-of-view-deg> 70 </default-field-of-view-deg>
     </config>
@@ -88,11 +88,11 @@
   <view n="0">
     <internal archive="y">true</internal>
     <config>
-      <x-offset-m archive="y">  -0.505 </x-offset-m>	<!-- Right -->
+      <x-offset-m archive="y">  -0.509 </x-offset-m>	<!-- Right -->
       <y-offset-m archive="y">  -2.154 </y-offset-m>	<!-- Up    -->
-      <z-offset-m archive="y"> -13.150 </z-offset-m>	<!-- Back  -->
-      <pitch-offset-deg> -5 </pitch-offset-deg>
-      <default-field-of-view-deg> 70 </default-field-of-view-deg>
+      <z-offset-m archive="y"> -13.450 </z-offset-m>	<!-- Back  -->
+      <pitch-offset-deg> -10 </pitch-offset-deg>
+      <default-field-of-view-deg> 77 </default-field-of-view-deg>
     </config>
   </view>
 

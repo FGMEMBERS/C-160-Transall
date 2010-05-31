@@ -15,9 +15,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m> -0.470 </y-m>
-      <z-m>  0.000 </z-m>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.656 </y-m>
+      <z-m>  0.099 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -27,9 +27,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/ai/ai.xml</path>
     <offsets>
-      <x-m> 0.090 </x-m>
-      <y-m> 0.470 </y-m>
-      <z-m> 0.000 </z-m>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.656 </y-m>
+      <z-m> 0.099 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -40,9 +40,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m> -0.610 </y-m>
-      <z-m>  0.000 </z-m>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.758 </y-m>
+      <z-m>  0.082 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -52,9 +52,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
     <offsets>
-      <x-m> 0.090 </x-m>
-      <y-m> 0.610 </y-m>
-      <z-m> 0.000 </z-m>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.758 </y-m>
+      <z-m> 0.082 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -65,9 +65,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m> -0.610 </y-m>
-      <z-m> -0.110 </z-m>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.553 </y-m>
+      <z-m>  0.078 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -77,9 +77,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m>  0.610 </y-m>
-      <z-m> -0.110 </z-m>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.553 </y-m>
+      <z-m> 0.078 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -90,9 +90,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
-      <x-m>  0.090 </x-m>
-      <y-m> -0.340 </y-m>
-      <z-m>  0.000 </z-m>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.549 </y-m>
+      <z-m> -0.008 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -102,9 +102,9 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
     <offsets>
-      <x-m> 0.090 </x-m>
-      <y-m> 0.340 </y-m>
-      <z-m> 0.000 </z-m>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.549 </y-m>
+      <z-m> -0.008 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>

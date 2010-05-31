@@ -1023,5 +1023,28 @@
    </offsets>
   </model>
 
+  <!-- Wing light cone right -->
+  <model>
+    <name>Taxi-Light</name>
+    <path>Aircraft/C-160-Transall/Models/light/light-cone.xml</path>
+    <offsets>
+      <x-m>          -4.285 </x-m>
+      <y-m>          11.207 </y-m>
+      <z-m>          -0.643 </z-m>
+      <pitch-deg>    -7.500 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Taxi-Light</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[0]/position-norm</property>
+        <value> 1 </value>
+      </equals>
+    </condition>
+  </animation>
+
 </PropertyList>
 
