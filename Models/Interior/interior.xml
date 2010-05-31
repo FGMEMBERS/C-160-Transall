@@ -42,6 +42,19 @@
     </offsets>
   </model>
 
+  <!-- Siege -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
+    <offsets>
+      <x-m> -13.215 </x-m>
+      <y-m>  -0.505 </y-m>
+      <z-m>  -2.725 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Copilote -->
   <model>
     <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
@@ -55,13 +68,39 @@
     </offsets>
   </model>
 
+  <!-- Siege -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
+    <offsets>
+      <x-m> -12.891 </x-m>
+      <y-m>   0.505 </y-m>
+      <z-m>  -2.725 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Commandant -->
   <model>
     <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
     <offsets>
       <x-m> -12.154 </x-m>
       <y-m>   0.000 </y-m>
-      <z-m>  -2.589 </z-m>
+      <z-m>  -2.659 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Siege -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
+    <offsets>
+      <x-m> -12.247 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -2.725 </z-m>
       <roll-deg>    0 </roll-deg>
       <pitch-deg>   0 </pitch-deg>
       <heading-deg> 0 </heading-deg>
@@ -72,12 +111,25 @@
   <model>
     <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
     <offsets>
-      <x-m> -12.464 </x-m>
-      <y-m>   0.995 </y-m>
-      <z-m>  -2.739 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
+      <x-m> -12.552 </x-m>
+      <y-m>   1.095 </y-m>
+      <z-m>  -2.659 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>     0 </pitch-deg>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Siege -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
+    <offsets>
+      <x-m> -12.468 </x-m>
+      <y-m>   1.109 </y-m>
+      <z-m>  -2.725 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>     0 </pitch-deg>
+      <heading-deg> 180 </heading-deg>
     </offsets>
   </model>
 
