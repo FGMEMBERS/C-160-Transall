@@ -143,6 +143,19 @@
     </offsets>
   </model>
 
+  <!-- Plafonnier -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/overhead/overhead.xml</path>
+    <offsets>
+      <x-m> -13.579 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -1.686 </z-m>
+      <roll-deg>     0.0 </roll-deg>
+      <pitch-deg>   54.6 </pitch-deg>
+      <heading-deg>  0.0 </heading-deg>
+    </offsets>
+  </model>
+
   <!-- Portes cargo arriere -->
   <animation>
     <type>rotate</type>
