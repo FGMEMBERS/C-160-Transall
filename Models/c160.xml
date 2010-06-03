@@ -141,7 +141,7 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/C-160-Transall/Models/Effects/C160reflect</inherits-from>
+    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>porteGE</object-name>
     <object-name>porteGI</object-name>
