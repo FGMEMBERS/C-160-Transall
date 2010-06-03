@@ -136,5 +136,55 @@
     </offsets>
   </model>
 
+  <!-- Oil -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil0.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.049 </y-m>
+      <z-m>  0.150 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil1.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.041 </y-m>
+      <z-m> 0.150 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Gear manette -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
+    <offsets>
+      <x-m> -0.200 </x-m>
+      <y-m> -0.374 </y-m>
+      <z-m>  0.046 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
+    <offsets>
+      <x-m> -0.200 </x-m>
+      <y-m>  0.374 </y-m>
+      <z-m>  0.046 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
 
