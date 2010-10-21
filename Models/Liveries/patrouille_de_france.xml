@@ -5,8 +5,8 @@
     <model>
       <shader-effect type="bool">true</shader-effect>
       <livery>
-        <name type="string">Default</name>
-        <texture>texture.png</texture>
+        <name type="string">La Patrouille de France FG</name>
+        <texture>Liveries/patrouille_de_france.png</texture>
 <!--
         <diffuse>
           <red>   0.5 </red>

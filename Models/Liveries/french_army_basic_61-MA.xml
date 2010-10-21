@@ -3,10 +3,10 @@
 <PropertyList>
   <sim>
     <model>
-      <shader-effect type="bool">true</shader-effect>
+      <shader-effect type="bool">false</shader-effect>
       <livery>
-        <name type="string">Default</name>
-        <texture>texture.png</texture>
+        <name type="string">French army - Basic livery 61-MA</name>
+        <texture>Liveries/french_army_basic_61-MA.png</texture>
 <!--
         <diffuse>
           <red>   0.5 </red>
