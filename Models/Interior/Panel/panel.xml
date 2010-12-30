@@ -186,5 +186,30 @@
     </offsets>
   </model>
 
+  <!-- NAV LIGHT -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m> -0.001 </x-m>
+      <y-m> -0.534 </y-m>
+      <z-m>  0.221 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m> -0.001 </x-m>
+      <y-m>  0.534 </y-m>
+      <z-m>  0.221 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
 </PropertyList>
 

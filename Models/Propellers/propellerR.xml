@@ -33,68 +33,68 @@
  <animation>
    <type>rotate</type>
    <object-name>pal1</object-name>
-   <property>/controls/engines/engine[1]/propeller-pitch</property>
-   <factor> 62.0 </factor>
+   <property>controls/engines/engine[1]/propeller-pitch</property>
+   <factor> -62 </factor>
    <center>
-     <x-m> 0.0 </x-m>
-     <y-m> 0.0 </y-m>
-     <z-m> 0.0 </z-m>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
    </center>
    <axis>
-     <x>  0.0 </x>
-     <y>  0.0 </y>
-     <z> -1.0 </z>
+     <x>  0 </x>
+     <y>  0 </y>
+     <z> -1 </z>
    </axis>
  </animation>
 
  <animation>
    <type>rotate</type>
    <object-name>pal2</object-name>
-   <property>/controls/engines/engine[1]/propeller-pitch</property>
-   <factor> 62.0 </factor>
+   <property>controls/engines/engine[1]/propeller-pitch</property>
+   <factor> -62 </factor>
    <center>
-     <x-m> 0.0 </x-m>
-     <y-m> 0.0 </y-m>
-     <z-m> 0.0 </z-m>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
    </center>
    <axis>
-     <x>  0.0 </x>
-     <y>  1.0 </y>
-     <z>  0.0 </z>
+     <x>  0 </x>
+     <y>  1 </y>
+     <z>  0 </z>
    </axis>
  </animation>
 
  <animation>
    <type>rotate</type>
    <object-name>pal3</object-name>
-   <property>/controls/engines/engine[1]/propeller-pitch</property>
-   <factor> 62.0 </factor>
+   <property>controls/engines/engine[1]/propeller-pitch</property>
+   <factor> -62 </factor>
    <center>
-     <x-m> 0.0 </x-m>
-     <y-m> 0.0 </y-m>
-     <z-m> 0.0 </z-m>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
    </center>
    <axis>
-     <x>  0.0 </x>
-     <y>  0.0 </y>
-     <z>  1.0 </z>
+     <x>  0 </x>
+     <y>  0 </y>
+     <z>  1 </z>
    </axis>
  </animation>
  
   <animation>
    <type>rotate</type>
    <object-name>pal4</object-name>
-   <property>/controls/engines/engine[1]/propeller-pitch</property>
-   <factor> 62.0 </factor>
+   <property>controls/engines/engine[1]/propeller-pitch</property>
+   <factor> -62 </factor>
    <center>
-     <x-m> 0.0 </x-m>
-     <y-m> 0.0 </y-m>
-     <z-m> 0.0 </z-m>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
    </center>
    <axis>
-     <x>  0.0 </x>
-     <y> -1.0 </y>
-     <z>  0.0 </z>
+     <x>  0 </x>
+     <y> -1 </y>
+     <z>  0 </z>
    </axis>
  </animation>
 
@@ -132,16 +132,16 @@
    <type>spin</type>
    <object-name>heliceD</object-name>
    <property>engines/engine[1]/rpm</property>
-   <factor> -0.479 </factor>
+   <factor> 0.479 </factor>
    <center>
-     <x-m> 0.0 </x-m>
-     <y-m> 0.0 </y-m>
-     <z-m> 0.0 </z-m>
+     <x-m> 0 </x-m>
+     <y-m> 0 </y-m>
+     <z-m> 0 </z-m>
    </center>
    <axis>
-     <x> 1.0 </x>
-     <y> 0.0 </y>
-     <z> 0.0 </z>
+     <x> 1 </x>
+     <y> 0 </y>
+     <z> 0 </z>
    </axis>
  </animation>
 

@@ -16,6 +16,7 @@
 
     <model>
       <path>Aircraft/C-160-Transall/Models/c160.xml</path>
+      <shader-effect type="bool">false</shader-effect>
       <livery>
         <file type="string">default</file>
       </livery>
@@ -114,14 +115,13 @@
   </instrumentation>
 
   <nasal>
-    <c160>
-      <file>Aircraft/C-160-Transall/Nasal/doors.nas</file>
-      <file>Aircraft/C-160-Transall/Nasal/liveries.nas</file>
-      <file>Aircraft/C-160-Transall/Nasal/light.nas</file>
-    </c160>
     <doors>
       <file>Aircraft/C-160-Transall/Nasal/doors.nas</file>
     </doors>
+    <c160>
+      <file>Aircraft/C-160-Transall/Nasal/liveries.nas</file>
+      <file>Aircraft/C-160-Transall/Nasal/light.nas</file>
+    </c160>
   </nasal>
 
 </PropertyList>

@@ -7,9 +7,23 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/C-160-Transall/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -142,6 +156,12 @@
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <condition>
+      <equals>
+        <property>/sim/model/shader-effects</property>
+        <value> true </value>
+      </equals>
+    </condition>
     <object-name>fuselage</object-name>
     <object-name>porteGE</object-name>
     <object-name>porteGI</object-name>
@@ -191,6 +211,21 @@
     <object-name>cables</object-name>
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>roueA</object-name>
+    <object-name>roueG1</object-name>
+    <object-name>roueG2</object-name>
+    <object-name>roueD2</object-name>
+    <object-name>roueD1</object-name>
+    <condition>
+      <greater-than>
+        <property>gear/gear[0]/position-norm</property>
+        <value> 0.1 </value>
+      </greater-than>
+    </condition>
+  </animation>
+
   <!-- Les hélices --> 
   <model>
     <path>Aircraft/C-160-Transall/Models/Propellers/propellerL.xml</path>
@@ -215,17 +250,6 @@
     <name>shadowOSG</name>
     <path>Aircraft/C-160-Transall/Models/shadow.xml</path>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
 
   <!-- Effets sur le sol -->
   <!-- Roue avant -->
@@ -660,8 +684,8 @@
     <object-name>EnsembleGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 0.77 </dep></entry>
-      <entry><ind> 1 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.775 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.000 </dep></entry>
     </interpolation>
     <axis>
       <x>  0 </x>
@@ -681,8 +705,8 @@
     <object-name>EnsembleDroit</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 0.77 </dep></entry>
-      <entry><ind> 1 </ind><dep> 0.00 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.775 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.000 </dep></entry>
     </interpolation>
     <axis>
       <x>  0 </x>
@@ -1040,7 +1064,7 @@
     <object-name>Taxi-Light</object-name>
     <condition>
       <equals>
-        <property>gear/gear[0]/position-norm</property>
+        <property>controls/switches/landing-light</property>
         <value> 1 </value>
       </equals>
     </condition>
