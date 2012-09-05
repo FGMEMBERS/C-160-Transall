@@ -58,18 +58,19 @@
     <object-name>ailes2</object-name>
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
+    <object-name>porteA</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>antennes</object-name>
+    <object-name>baieH</object-name>
+    <object-name>baieB</object-name>
+
+    <object-name>trous</object-name>
+    <object-name>roueA</object-name>
     <object-name>roueG1</object-name>
     <object-name>roueG2</object-name>
     <object-name>roueD2</object-name>
     <object-name>roueD1</object-name>
-    <object-name>porteA</object-name>
-    <object-name>roueA</object-name>
-    <object-name>moteurs</object-name>
-    <object-name>trous</object-name>
-    <object-name>antennes</object-name>
     <object-name>echappes</object-name>
-    <object-name>baieH</object-name>
-    <object-name>baieB</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
@@ -107,51 +108,33 @@
     <object-name>ailes2</object-name>
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
+    <object-name>porteA</object-name>
+    <object-name>moteurs</object-name>
+    <object-name>antennes</object-name>
+    <object-name>baieH</object-name>
+    <object-name>baieB</object-name>
+
+    <object-name>trous</object-name>
+    <object-name>roueA</object-name>
     <object-name>roueG1</object-name>
     <object-name>roueG2</object-name>
     <object-name>roueD2</object-name>
     <object-name>roueD1</object-name>
-    <object-name>porteA</object-name>
-    <object-name>roueA</object-name>
-    <object-name>moteurs</object-name>
-    <object-name>trous</object-name>
-    <object-name>antennes</object-name>
     <object-name>echappes</object-name>
-    <object-name>baieH</object-name>
-    <object-name>baieB</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
     <emission>
       <red-prop>emission/red</red-prop>
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -211,6 +194,21 @@
     <object-name>cables</object-name>
   </animation>
 
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -5.300 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Intérieur -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/interior.xml</path>
+  </model>
+
   <animation>
     <type>select</type>
     <object-name>roueA</object-name>
@@ -225,6 +223,27 @@
       </greater-than>
     </condition>
   </animation>
+
+  <!-- Particules OSG -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Effects/trail/trail1.xml</path>
+    <offsets>
+      <x-m> -1.50412 </x-m>
+      <y-m> -5.41055 </y-m>
+      <z-m> -1.84622 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Effects/trail/trail2.xml</path>
+    <offsets>
+      <x-m> -1.50412 </x-m>
+      <y-m>  5.41055 </y-m>
+      <z-m> -1.84622 </z-m>
+    </offsets>
+  </model>
 
   <!-- Les hélices --> 
   <model>
@@ -243,12 +262,6 @@
       <y-m>  5.411 </y-m>
       <z-m> -1.428 </z-m>
     </offsets>
-  </model>
-
-  <!-- Une ombre pour OSG -->
-  <model>
-    <name>shadowOSG</name>
-    <path>Aircraft/C-160-Transall/Models/shadow.xml</path>
   </model>
 
   <!-- Effets sur le sol -->
@@ -297,16 +310,6 @@
       <x-m> -1.702 </x-m>
       <y-m>  2.502 </y-m>
       <z-m> -5.802 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
     </offsets>
   </model>
 
