@@ -17,18 +17,12 @@
     <object-name>intvitres</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>intvitres</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>intvitres</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Pilote -->
   <model>
     <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
@@ -76,9 +70,6 @@
       <x-m> -12.454 </x-m>
       <y-m>   0.000 </y-m>
       <z-m>  -2.659 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -89,9 +80,6 @@
       <x-m> -12.547 </x-m>
       <y-m>   0.000 </y-m>
       <z-m>  -2.725 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg>   0 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -140,9 +128,24 @@
 
   <!-- Portes cargo arriere -->
   <animation>
+    <type>pick</type>
+    <object-name>intbaieH</object-name>
+    <object-name>intbaieB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>intbaieB</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 40 </factor>
     <center>
       <x-m>  2.518 </x-m>
@@ -159,7 +162,7 @@
   <animation>
     <type>rotate</type>
     <object-name>intbaieH</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 20 </factor>
     <center>
       <x-m> 10.735 </x-m>
@@ -174,4 +177,3 @@
   </animation>
 
 </PropertyList>
-

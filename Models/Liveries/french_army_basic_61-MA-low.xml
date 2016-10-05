@@ -5,10 +5,10 @@
   <sim>
 
     <model>
-      <shader-effect type="bool">true</shader-effect>
+      <shader-effect type="bool">false</shader-effect>
       <livery>
-        <name type="string">Default</name>
-        <texture>texture.png</texture>
+        <name type="string">(Low) French army - Basic livery 61-MA</name>
+        <texture>Liveries/1024x1024/french_army_basic_61-MA.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>

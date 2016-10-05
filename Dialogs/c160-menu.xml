@@ -6,6 +6,15 @@
     <menu n="10">
       <label>C160 Transall</label>
       <enabled type="bool">true</enabled>
+      <!--
+      <item>
+        <label>Autostart</label>
+        <binding>
+          <command>nasal</command>
+          <script>engines.autostart();</script>
+        </binding>
+      </item>
+      -->
       <item>
         <label>Select Livery</label>
         <binding>
@@ -17,4 +26,3 @@
   </default>
 
 </PropertyList>
-

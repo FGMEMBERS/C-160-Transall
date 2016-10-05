@@ -9,7 +9,7 @@ data 7
 manette
 texture "divers.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 276
 0.004628 0.009925 -0.008966
 -0.004628 -0.009925 -0.008966

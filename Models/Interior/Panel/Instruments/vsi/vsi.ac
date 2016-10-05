@@ -10,7 +10,7 @@ data 7
 VSIface
 texture "vsi.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 16
 -0.003583 0.023082 -0.023082
 -0.003583 0.012491 -0.030157
@@ -86,7 +86,7 @@ data 8
 VSIgauge
 texture "vsi.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 73
 -0.000134 -0.01709 0.029601
 -0.000134 -0.029601 0.01709
@@ -506,7 +506,7 @@ data 9
 VSIneedle
 texture "vsi.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 116
 -0.002551 -0.000557 0.002861
 -0.002551 0.000557 0.002861
@@ -1248,7 +1248,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 34
 -0.001243 0 -0
 -0.000299 0.027796 -0.018572

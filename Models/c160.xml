@@ -4,6 +4,11 @@
 
   <path>c160.ac</path>
 
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/C-160-Transall/Sounds/mp-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/C-160-Transall/Models/Liveries", 10);
@@ -13,9 +18,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -71,10 +76,10 @@
     <object-name>roueD2</object-name>
     <object-name>roueD1</object-name>
     <object-name>echappes</object-name>
-
+    <object-name>cables</object-name>
+    
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
-    <object-name>cables</object-name>
   </animation>
 
   <animation>
@@ -121,7 +126,8 @@
     <object-name>roueD2</object-name>
     <object-name>roueD1</object-name>
     <object-name>echappes</object-name>
-
+    <object-name>cables</object-name>
+    
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
@@ -130,21 +136,10 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
-    <condition>
-      <equals>
-        <property>/sim/model/shader-effects</property>
-        <value> true </value>
-      </equals>
-    </condition>
     <object-name>fuselage</object-name>
     <object-name>porteGE</object-name>
     <object-name>porteGI</object-name>
@@ -181,19 +176,17 @@
     <object-name>baieB</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/C-160-Transall/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
-    <object-name>cables</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/C-160-Transall/Models/shadow.xml</path>
@@ -718,6 +711,82 @@
     </axis>
   </animation>
 
+  <!-- Compression -->
+  <animation>
+    <type>translate</type>
+    <object-name>roueA</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>roueG1</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>roueG2</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>roueD1</object-name>
+    <property>gear/gear[3]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>translate</type>
+    <object-name>roueD2</object-name>
+    <property>gear/gear[4]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
   <!-- Fermeture des portes du train -->
   <animation>
     <type>rotate</type>
@@ -962,9 +1031,24 @@
 
   <!-- Portes cargo arriere -->
   <animation>
+    <type>pick</type>
+    <object-name>baieH</object-name>
+    <object-name>baieB</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.passenger.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>rotate</type>
     <object-name>baieB</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 40 </factor>
     <center>
       <x-m>  2.518 </x-m>
@@ -981,7 +1065,7 @@
   <animation>
     <type>rotate</type>
     <object-name>baieH</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 20 </factor>
     <center>
       <x-m> 10.735 </x-m>
@@ -1024,6 +1108,15 @@
   </model>
 
   <model>
+    <path>Aircraft/C-160-Transall/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m>  -2.737 </x-m>
+      <y-m> -20.058 </y-m>
+      <z-m>  -0.035 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/C-160-Transall/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m> -2.727 </x-m>
@@ -1033,16 +1126,7 @@
   </model>
 
   <model>
-    <path>Aircraft/C-160-Transall/Models/light/StrobeWhite.xml</path>
-    <offsets>
-      <x-m>  -2.737 </x-m>
-      <y-m> -20.058 </y-m>
-      <z-m>  -0.035 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/C-160-Transall/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -2.737 </x-m>
       <y-m> 20.058 </y-m>
@@ -1052,26 +1136,13 @@
 
   <!-- Wing light cone right -->
   <model>
-    <name>Taxi-Light</name>
     <path>Aircraft/C-160-Transall/Models/light/light-cone.xml</path>
     <offsets>
-      <x-m>          -4.285 </x-m>
-      <y-m>          11.207 </y-m>
-      <z-m>          -0.643 </z-m>
-      <pitch-deg>    -7.500 </pitch-deg>
+      <x-m>       -4.285 </x-m>
+      <y-m>       11.207 </y-m>
+      <z-m>       -0.643 </z-m>
+      <pitch-deg> -7.500 </pitch-deg>
     </offsets>
   </model>
 
-  <animation>
-    <type>select</type>
-    <object-name>Taxi-Light</object-name>
-    <condition>
-      <equals>
-        <property>controls/switches/landing-light</property>
-        <value> 1 </value>
-      </equals>
-    </condition>
-  </animation>
-
 </PropertyList>
-

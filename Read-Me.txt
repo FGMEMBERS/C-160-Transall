@@ -6,8 +6,8 @@ English/Français
 A little history
 ================
 
-Douglas A 26 "Invader"
-======================
+C-160 Transall
+==============
 
 Manufacturer                  :
 Type                          :
@@ -28,11 +28,11 @@ Thanks
 
 ===============
 BARANGER Emmanuel
-September, 12, 2009. 
+December, 10, 2009. 
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr
-
 
 [Français]
 ----------
@@ -40,8 +40,8 @@ embaranger@free.fr
 Un peu d'histoire
 =================
 
-Douglas A 26 "Invader"
-======================
+C-160 Transall
+==============
 
 Constructeur                  :
 Type                          :
@@ -54,7 +54,6 @@ Masse à vide                  :
 Vitesse de croisière          :
 Equipage                      :
 
-
 Quelques touches utiles :
 =========================
 
@@ -63,8 +62,8 @@ Remerciements
 
 ===============
 BARANGER Emmanuel
-12 Septembre 2009.
+10 Decembre 2009.
 
 http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
 embaranger@free.fr
-

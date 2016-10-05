@@ -7,18 +7,13 @@
     <model>
       <shader-effect type="bool">true</shader-effect>
       <livery>
-        <name type="string">C160 Red Cross (low)</name>
-        <texture>Liveries/C160Relief-low.png</texture>
+        <name type="string">(Low) C160 Red Cross</name>
+        <texture>Liveries/1024x1024/C160Relief.png</texture>
         <specular>
           <red>   0.3 </red>
           <green> 0.3 </green>
           <blue>  0.3 </blue>
         </specular>
-        <emission>
-          <red>   0.2 </red>
-          <green> 0.2 </green>
-          <blue>  0.2 </blue>
-        </emission>
       </livery>
     </model>
 
