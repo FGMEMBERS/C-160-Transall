@@ -16,9 +16,9 @@ name "buttons"
 loc 0 0 -0
 data 7
 buttons
-texture "colors.png"
+texture "overhead.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 1722
 0.07232 0.095781 -0.361234
 0.07232 0.091918 -0.364404
@@ -13397,9 +13397,9 @@ name "overhead"
 loc 0 0 -0
 data 8
 overhead
-texture "colors.png"
+texture "overhead.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 50
 -0.002657 -0.180098 0.385056
 0.074452 -0.176441 0.385056

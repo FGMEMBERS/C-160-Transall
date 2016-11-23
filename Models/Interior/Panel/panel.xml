@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
+<!-- Source : http://www.airliners.net/photo/Germany-Air-Force/Transall-C-160D/2108733/L -->
 <PropertyList>
 
   <path>panel.ac</path>
 
   <animation>
     <!-- Objets opaques -->
-    <object-name>panel</object-name>
-
+    <object-name>panel1</object-name>
+    <object-name>panel2</object-name>
+    
     <!-- Objets transparents -->
   </animation>
 
@@ -30,25 +32,6 @@
     </offsets>
   </model>
 
-  <!-- asi -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
-    <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m> -0.758 </y-m>
-      <z-m>  0.082 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
-    <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.758 </y-m>
-      <z-m> 0.082 </z-m>
-    </offsets>
-  </model>
-
   <!-- alt -->
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/alt/alt.xml</path>
@@ -58,7 +41,7 @@
       <z-m>  0.078 </z-m>
     </offsets>
   </model>
-
+  
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/alt/alt.xml</path>
     <offsets>
@@ -67,7 +50,121 @@
       <z-m> 0.078 </z-m>
     </offsets>
   </model>
+  
+  <!-- asi -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.759 </y-m>
+      <z-m>  0.082 </z-m>
+    </offsets>
+  </model>
 
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.759 </y-m>
+      <z-m> 0.082 </z-m>
+    </offsets>
+  </model>
+
+  <!-- NAV LIGHT -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.534 </y-m>
+      <z-m>  0.221 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.534 </y-m>
+      <z-m> 0.221 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Gear manette -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
+    <offsets>
+      <x-m> -0.200 </x-m>
+      <y-m> -0.374 </y-m>
+      <z-m>  0.046 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
+    <offsets>
+      <x-m> -0.200 </x-m>
+      <y-m>  0.374 </y-m>
+      <z-m>  0.046 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- HIS -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m>  0.003 </x-m>
+      <y-m> -0.656 </y-m>
+      <z-m> -0.020 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <offsets>
+      <x-m>  0.003 </x-m>
+      <y-m>  0.656 </y-m>
+      <z-m> -0.020 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Oil -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil0.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.049 </y-m>
+      <z-m>  0.150 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil1.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.041 </y-m>
+      <z-m> 0.150 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Temperature -->
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/temp/temp0.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.231 </y-m>
+      <z-m> -0.008 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/temp/temp1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.142 </y-m>
+      <z-m> -0.008 </z-m>
+    </offsets>
+  </model>
+  
   <!-- vsi -->
   <model>
     <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
@@ -84,82 +181,6 @@
       <x-m>  0.000 </x-m>
       <y-m>  0.549 </y-m>
       <z-m> -0.008 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Temperature -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/temp/temp0.xml</path>
-    <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m> -0.231 </y-m>
-      <z-m> -0.008 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/temp/temp1.xml</path>
-    <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m> -0.142 </y-m>
-      <z-m> -0.008 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Oil -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil0.xml</path>
-    <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m> -0.049 </y-m>
-      <z-m>  0.150 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil1.xml</path>
-    <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.041 </y-m>
-      <z-m> 0.150 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Gear manette -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
-    <offsets>
-      <x-m> -0.200 </x-m>
-      <y-m> -0.374 </y-m>
-      <z-m>  0.046 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
-    <offsets>
-      <x-m> -0.200 </x-m>
-      <y-m>  0.374 </y-m>
-      <z-m>  0.046 </z-m>
-    </offsets>
-  </model>
-
-  <!-- NAV LIGHT -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
-    <offsets>
-      <x-m> -0.001 </x-m>
-      <y-m> -0.534 </y-m>
-      <z-m>  0.221 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
-    <offsets>
-      <x-m> -0.001 </x-m>
-      <y-m>  0.534 </y-m>
-      <z-m>  0.221 </z-m>
     </offsets>
   </model>
 

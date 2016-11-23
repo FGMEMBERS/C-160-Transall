@@ -10,7 +10,7 @@ data 4
 face
 texture "temp.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 17
 0.000152 -0.000001 0.000003
 0.000152 -0.01334 0.032206
@@ -134,7 +134,7 @@ data 4
 fond
 texture "temp.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 128
 0.002887 0.000091 -0.032866
 0.002887 -0.006308 -0.032238
@@ -945,7 +945,7 @@ data 6
 needle
 texture "temp.png"
 texrep 1.000000 1.000000
-crease 45.000001
+crease 180.000005
 numvert 68
 0.001463 0.000068 -0.007522
 0.001463 0.000143 -0.006238
@@ -1362,7 +1362,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 34
 0.000218 0.000194 -0.000267
 0.002658 0.029353 -0.019751

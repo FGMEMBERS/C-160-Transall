@@ -10,7 +10,7 @@ data 8
 ASIbezel
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 73
 -0.000235 -0.016853 0.02919
 -0.000235 -0.02919 0.016853
@@ -430,7 +430,7 @@ data 7
 ASIface
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 16
 -0.003993 0.022761 -0.022761
 -0.003993 0.012318 -0.029738
@@ -506,7 +506,7 @@ data 9
 ASIneedle
 texture "asi.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 116
 -0.003211 0.002821 0.000549
 -0.003211 0.002821 -0.000549
@@ -1248,7 +1248,7 @@ name "vitre"
 loc 0 0 -0
 data 5
 vitre
-crease 30.000001
+crease 180.000005
 numvert 34
 -0.001107 0 -0
 -0.000174 0.027476 -0.018358

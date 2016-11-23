@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <title>C 160 Transall</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>D</name>
+    <desc>Open/Close passanger bay</desc>
+  </key>
+  <key>
+    <name>l</name>
+    <desc>Landing light ON//OFF</desc>
+  </key>
+  
+</PropertyList>

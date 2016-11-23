@@ -8,9 +8,9 @@ name "intbaieB"
 loc 0 0 -0
 data 8
 intbaieB
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 78
 2.517674 -4.164135 -0.000019
 2.508578 -4.162517 0.413183
@@ -559,9 +559,9 @@ name "intbaieH"
 loc 0 0 -0
 data 8
 intbaieH
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 65
 5.781636 -3.092889 -1.143749
 5.781635 -3.092889 1.143729
@@ -1019,9 +1019,9 @@ name "interieur"
 loc 0 0 -0
 data 9
 interieur
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 559
 -12.004732 -4.012178 1.465331
 -12.004732 -4.151439 1.465331
@@ -5487,9 +5487,9 @@ name "inttour"
 loc 0 0 -0
 data 7
 inttour
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 176
 5.410841 -2.841684 1.465844
 5.410841 -2.841684 -1.465864
@@ -6290,7 +6290,7 @@ name "intvitres"
 loc 0 0 -0
 data 9
 intvitres
-crease 30.000001
+crease 180.000005
 numvert 48
 -13.048246 -1.984053 1.278285
 -13.048244 -1.849113 1.179076
@@ -6443,9 +6443,9 @@ name "paroie"
 loc 0 0 -0
 data 6
 paroie
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 45
 -11.888744 -3.753826 0.811411
 -11.888744 -4.087447 0.811411
@@ -6765,9 +6765,9 @@ name "planchet"
 loc 0 0 -0
 data 8
 planchet
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 82
 -11.888744 -3.344356 -0.000018
 -12.004732 -4.012178 1.465331
@@ -7332,9 +7332,9 @@ name "support"
 loc 0 0 -0
 data 7
 support
-texture "colors.png"
+texture "interior.png"
 texrep 1.000000 1.000000
-crease 30.000001
+crease 180.000005
 numvert 128
 -13.33564 -3.347987 0.274854
 -13.383365 -3.347987 0.249345
