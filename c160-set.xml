@@ -20,6 +20,23 @@
       <model type="int">   4 </model>
     </rating>
 
+    <tags>
+      <tag>transport</tag>
+      <tag>fokker</tag>
+      <tag>messerschmitt</tag>
+      <tag>1960s</tag>
+      <tag>1970s</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag>
+      <tag>high-wing</tag>
+      <tag>retractable-gear</tag>
+      <tag>ifr</tag>
+      <tag>turboprop</tag>
+      <tag>twin-engine</tag>
+    </tags>
+
   </sim>
 
 </PropertyList>
