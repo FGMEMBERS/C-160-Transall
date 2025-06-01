@@ -5,12 +5,28 @@
   <title>C 160 Transall</title>
   <line>______________________________________________</line>
   <key>
-    <name>D</name>
+    <name>}</name>
+    <desc>AutoStart/AutoStop</desc>
+  </key>
+  <key>
+    <name>shift+d (D)</name>
     <desc>Open/Close passanger bay</desc>
   </key>
   <key>
     <name>l</name>
     <desc>Landing light ON//OFF</desc>
   </key>
-  
+  <key>
+    <name>shift+j (J)</name>
+    <desc>Parachutist</desc>
+  </key>
+  <key>
+    <name>r</name>
+    <desc>Radar Retraction (Gabriel version)</desc>
+  </key>
+  <key>
+    <name>shift+q (Q)</name>
+    <desc>Reset view</desc>
+  </key>
+
 </PropertyList>

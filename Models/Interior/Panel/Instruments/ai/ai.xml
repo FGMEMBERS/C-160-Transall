@@ -25,12 +25,33 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>fond</object-name>
+    <object-name>AttitudeBall</object-name>
+    <object-name>barre</object-name>
+    <object-name>barre1</object-name>
+    <object-name>barre2</object-name>
+    <object-name>SkyPointer</object-name>
+    <object-name>bouton</object-name>
+    <object-name>ai-ring</object-name>
+    <object-name>nav-pitch-steering-ba</object-name>
+    <object-name>nav-yaw-steering-bar</object-name>
+    <object-name>gs-scale</object-name>
+    <object-name>ils-flags</object-name>
+    <object-name>bank-index</object-name>
+    <object-name>course-flag</object-name>
+    <object-name>ring-slip</object-name>
+    <object-name>slip-ball</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Aircraft/C-160-Transall/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-  
+
   <animation>
     <type>material</type>
     <object-name>AttitudeBall</object-name>
@@ -43,13 +64,16 @@
     <object-name>barre2</object-name>
     <object-name>nav-pitch-steering-ba</object-name>
     <object-name>nav-yaw-steering-bar</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
     <emission>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
       <red>   0.50 </red>
-      <green> 0.25 </green>
-      <blue>  0.25 </blue>
-    </emission> 
-  </animation>    
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
+    </emission>
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -66,7 +90,7 @@
       <y> 0 </y>
       <z> 0 </z>
     </axis>
-  </animation>  
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -83,7 +107,7 @@
       <y> 1 </y>
       <z> 0 </z>
     </axis>
-  </animation>  
+  </animation>
 
   <animation>
     <type>rotate</type>
@@ -101,7 +125,7 @@
       <z> 0 </z>
     </axis>
   </animation>
- 
+
   <animation>
     <type>rotate</type>
     <object-name>slip-ball</object-name>

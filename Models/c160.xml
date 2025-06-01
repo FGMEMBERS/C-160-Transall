@@ -6,29 +6,15 @@
 
   <!-- MP sound call -->
   <sound>
-    <path>Aircraft/C-160-Transall/Sounds/mp-sound.xml</path>
+    <path>../Sounds/mp-sound.xml</path>
   </sound>
-  
+
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/C-160-Transall/Models/Liveries", 10);
-
-      var self = cmdarg();
-
-      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
-      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
-      
-      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
-      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
-      
-      crew_door.alias(float_0);
-      passenger_door.alias(float_1);
     </load>
-
     <unload>
       livery_update.stop();
-      crew_door.unalias();
-      passenger_door.unalias();
     </unload>
   </nasal>
 
@@ -68,6 +54,8 @@
     <object-name>antennes</object-name>
     <object-name>baieH</object-name>
     <object-name>baieB</object-name>
+    <object-name>probe</object-name>
+    <object-name>Gabriel</object-name>
 
     <object-name>trous</object-name>
     <object-name>roueA</object-name>
@@ -77,9 +65,12 @@
     <object-name>roueD1</object-name>
     <object-name>echappes</object-name>
     <object-name>cables</object-name>
-    
+    <object-name>Radar</object-name>
+
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
+    <!-- HDR mode -->
+    <object-name>HDRvitres</object-name>
   </animation>
 
   <animation>
@@ -118,7 +109,8 @@
     <object-name>antennes</object-name>
     <object-name>baieH</object-name>
     <object-name>baieB</object-name>
-
+    <object-name>probe</object-name>
+    <object-name>Gabriel</object-name>
     <object-name>trous</object-name>
     <object-name>roueA</object-name>
     <object-name>roueG1</object-name>
@@ -127,7 +119,10 @@
     <object-name>roueD1</object-name>
     <object-name>echappes</object-name>
     <object-name>cables</object-name>
-    
+    <object-name>Radar</object-name>
+    <object-name>vitres</object-name>
+    <object-name>HDRvitres</object-name>
+
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
@@ -139,7 +134,7 @@
   </animation>
 
   <effect>
-    <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+    <inherits-from>Aircraft/C-160-Transall/Models/Effects/Bump/bumpspec</inherits-from>
     <object-name>fuselage</object-name>
     <object-name>porteGE</object-name>
     <object-name>porteGI</object-name>
@@ -174,144 +169,104 @@
     <object-name>antennes</object-name>
     <object-name>baieH</object-name>
     <object-name>baieB</object-name>
+    <object-name>probe</object-name>
+    <object-name>Gabriel</object-name>
   </effect>
 
-  <!-- working for Rembrandt -->
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Aircraft/C-160-Transall/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>Effects/Glass/glassrain</inherits-from>
     <object-name>vitres</object-name>
   </effect>
-  
-  <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
-    <object-name>vitres</object-name>
-  </effect>
-  
-  <!-- Une ombre pour OSG -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/shadow.xml</path>
-    <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -5.300 </z-m>
-    </offsets>
-  </model>
 
-  <!-- Intérieur -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/interior.xml</path>
-  </model>
+  <effect>
+    <inherits-from>Effects/Glass/glass</inherits-from>
+    <object-name>HDRvitres</object-name>
+  </effect>
+
+  <!-- Sélection des vitres en fonction de HDR ou pas -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <property>sim/rendering/hdr/hdr-enabled</property> -->
+      <property>sim/multiplay/generic/bool[2]</property>
+    </condition>
+    <object-name>HDRvitres</object-name>
+  </animation>
 
   <animation>
     <type>select</type>
-    <object-name>roueA</object-name>
-    <object-name>roueG1</object-name>
-    <object-name>roueG2</object-name>
-    <object-name>roueD2</object-name>
-    <object-name>roueD1</object-name>
     <condition>
-      <greater-than>
-        <property>gear/gear[0]/position-norm</property>
-        <value> 0.1 </value>
-      </greater-than>
+      <!-- <not><property>sim/rendering/hdr/hdr-enabled</property></not> -->
+      <not><property>sim/multiplay/generic/bool[2]</property></not>
+    </condition>
+    <object-name>vitres</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>Gabriel</object-name>
+    <object-name>Radar</object-name>
+    <condition>
+      <equals>
+        <!-- <property>sim/model/mode</property> -->
+        <property>sim/multiplay/generic/string[0]</property>
+        <value>GABRIEL</value>
+      </equals>
     </condition>
   </animation>
 
-  <!-- Particules OSG -->
-  <!-- Gauche -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Effects/trail/trail1.xml</path>
-    <offsets>
-      <x-m> -1.50412 </x-m>
-      <y-m> -5.41055 </y-m>
-      <z-m> -1.84622 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Gauche -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Effects/trail/trail2.xml</path>
-    <offsets>
-      <x-m> -1.50412 </x-m>
-      <y-m>  5.41055 </y-m>
-      <z-m> -1.84622 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Les hélices --> 
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Propellers/propellerL.xml</path>
-    <offsets>
-      <x-m> -7.750 </x-m>
-      <y-m> -5.411 </y-m>
-      <z-m> -1.428 </z-m>
-    </offsets>
+    <path>Interior/interior.xml</path>
   </model>
 
   <model>
-    <path>Aircraft/C-160-Transall/Models/Propellers/propellerR.xml</path>
-    <offsets> 
-      <x-m> -7.750 </x-m>
-      <y-m>  5.411 </y-m>
-      <z-m> -1.428 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Effets sur le sol -->
-  <!-- Roue avant -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Effects/ground/ground0.xml</path>
-    <offsets>
-      <x-m> -12.970 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -5.737 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Roues gauches -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Effects/ground/ground1.xml</path>
-    <offsets>
-      <x-m> -3.266 </x-m>
-      <y-m> -2.502 </y-m>
-      <z-m> -5.802 </z-m>
-    </offsets>
+    <path>Effects/cranking/all-crankings.xml</path>
   </model>
 
   <model>
-    <path>Aircraft/C-160-Transall/Models/Effects/ground/ground2.xml</path>
-    <offsets>
-      <x-m> -1.702 </x-m>
-      <y-m> -2.502 </y-m>
-      <z-m> -5.802 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Roues droites -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Effects/ground/ground3.xml</path>
-    <offsets>
-      <x-m> -3.266 </x-m>
-      <y-m>  2.502 </y-m>
-      <z-m> -5.802 </z-m>
-    </offsets>
+    <path>Effects/trail/all-trails.xml</path>
   </model>
 
   <model>
-    <path>Aircraft/C-160-Transall/Models/Effects/ground/ground4.xml</path>
-    <offsets>
-      <x-m> -1.702 </x-m>
-      <y-m>  2.502 </y-m>
-      <z-m> -5.802 </z-m>
-    </offsets>
+    <path>Propellers/all-propellers.xml</path>
+  </model>
+
+  <animation>
+    <type>material</type>
+    <object-name>pal1</object-name>
+    <object-name>pal2</object-name>
+    <object-name>pal3</object-name>
+    <object-name>pal4</object-name>
+    <object-name>bol</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+
+    <property-base>sim/model/livery-propellers</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>Propellers/propeller.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <model>
+    <path>Effects/ground/all-ground.xml</path>
+  </model>
+
+  <model>
+    <path>light/all-lights.xml</path>
   </model>
 
   <!-- Gouverne de direction -->
   <animation>
     <type>rotate</type>
     <object-name>direction</object-name>
+    <!-- <property>controls/flight/rudder</property> -->
     <property>surface-positions/rudder-pos-norm</property>
-    <factor> 20 </factor>
+    <factor> 15 </factor>
     <axis>
       <x1-m> 14.886 </x1-m>
       <y1-m>  0.000 </y1-m>
@@ -326,8 +281,9 @@
   <animation>
     <type>rotate</type>
     <object-name>profondeur</object-name>
+    <!-- <property>controls/flight/elevator</property> -->
     <property>surface-positions/elevator-pos-norm</property>
-    <factor> 25 </factor>
+    <factor> 15 </factor>
     <center>
      <x-m> 14.623 </x-m>
      <y-m>  0.000 </y-m>
@@ -376,7 +332,7 @@
     <type>rotate</type>
     <object-name>voletG1</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor> -40 </factor>
+    <factor> 60 </factor>
     <axis>
       <x1-m> -0.648 </x1-m>
       <y1-m> -6.551 </y1-m>
@@ -388,10 +344,25 @@
   </animation>
 
   <animation>
+    <type>translate</type>
+    <object-name>voletG1</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.4 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>voletG2</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor> -40 </factor>
+    <factor> 60 </factor>
     <axis>
       <x1-m> -0.826 </x1-m>
       <y1-m> -9.412 </y1-m>
@@ -403,10 +374,25 @@
   </animation>
 
   <animation>
+    <type>translate</type>
+    <object-name>voletG2</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.4 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>voletG3</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor> -40 </factor>
+    <factor> 60 </factor>
     <axis>
       <x1-m>  -1.169 </x1-m>
       <y1-m> -14.927 </y1-m>
@@ -418,10 +404,25 @@
   </animation>
 
   <animation>
+    <type>translate</type>
+    <object-name>voletG3</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.4 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>voletD3</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor> -40 </factor>
+    <factor> 60 </factor>
     <axis>
       <x1-m> -0.826 </x1-m>
       <y1-m>  9.412 </y1-m>
@@ -433,10 +434,25 @@
   </animation>
 
   <animation>
+    <type>translate</type>
+    <object-name>voletD3</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.4 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>voletD2</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor> -40 </factor>
+    <factor> 60 </factor>
     <axis>
       <x1-m> -0.648 </x1-m>
       <y1-m>  6.551 </y1-m>
@@ -448,10 +464,25 @@
   </animation>
 
   <animation>
+    <type>translate</type>
+    <object-name>voletD2</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.4 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
     <type>rotate</type>
     <object-name>voletD1</object-name>
     <property>surface-positions/flap-pos-norm</property>
-    <factor> -40 </factor>
+    <factor> 60 </factor>
     <axis>
       <x1-m> -0.648 </x1-m>
       <y1-m>  1.945 </y1-m>
@@ -459,6 +490,21 @@
       <x2-m> -0.648 </x2-m>
       <y2-m>  6.551 </y2-m>
       <z2-m> -1.314 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>voletD1</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 0.4 </dep></entry>
+    </interpolation>
+    <axis>
+      <x>  1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
     </axis>
   </animation>
 
@@ -680,7 +726,7 @@
     <object-name>EnsembleGauche</object-name>
     <property>gear/gear[1]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 0.775 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.760 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.000 </dep></entry>
     </interpolation>
     <axis>
@@ -701,7 +747,7 @@
     <object-name>EnsembleDroit</object-name>
     <property>gear/gear[2]/position-norm</property>
     <interpolation>
-      <entry><ind> 0 </ind><dep> 0.775 </dep></entry>
+      <entry><ind> 0 </ind><dep> 0.760 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.000 </dep></entry>
     </interpolation>
     <axis>
@@ -711,11 +757,34 @@
     </axis>
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>EnsembleGauche</object-name>
+    <condition>
+      <not-equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </not-equals>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>EnsembleDroit</object-name>
+    <condition>
+      <not-equals>
+        <property>gear/gear[2]/position-norm</property>
+        <value>0</value>
+      </not-equals>
+    </condition>
+  </animation>
+
   <!-- Compression -->
   <animation>
     <type>translate</type>
     <object-name>roueA</object-name>
-    <property>gear/gear[0]/compression-norm</property>
+    <!-- <property>gear/gear[0]/compression-norm</property> -->
+    <property>sim/multiplay/generic/float[13]</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
@@ -726,11 +795,12 @@
       <z> 1 </z>
     </axis>
   </animation>
-  
+
   <animation>
     <type>translate</type>
     <object-name>roueG1</object-name>
-    <property>gear/gear[1]/compression-norm</property>
+    <!-- <property>gear/gear[1]/compression-norm</property> -->
+    <property>sim/multiplay/generic/float[14]</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
@@ -741,11 +811,12 @@
       <z> 1 </z>
     </axis>
   </animation>
-  
+
   <animation>
     <type>translate</type>
     <object-name>roueG2</object-name>
-    <property>gear/gear[2]/compression-norm</property>
+    <!-- <property>gear/gear[2]/compression-norm</property> -->
+    <property>sim/multiplay/generic/float[15]</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
@@ -756,11 +827,12 @@
       <z> 1 </z>
     </axis>
   </animation>
-  
+
   <animation>
     <type>translate</type>
     <object-name>roueD1</object-name>
-    <property>gear/gear[3]/compression-norm</property>
+    <!-- <property>gear/gear[3]/compression-norm</property> -->
+    <property>sim/multiplay/generic/float[16]</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
@@ -771,11 +843,12 @@
       <z> 1 </z>
     </axis>
   </animation>
-  
+
   <animation>
     <type>translate</type>
     <object-name>roueD2</object-name>
-    <property>gear/gear[4]/compression-norm</property>
+    <!-- <property>gear/gear[4]/compression-norm</property> -->
+    <property>sim/multiplay/generic/float[17]</property>
     <interpolation>
       <entry><ind> 0 </ind><dep> 0.0 </dep></entry>
       <entry><ind> 1 </ind><dep> 0.1 </dep></entry>
@@ -786,7 +859,7 @@
       <z> 1 </z>
     </axis>
   </animation>
-  
+
   <!-- Fermeture des portes du train -->
   <animation>
     <type>rotate</type>
@@ -929,8 +1002,9 @@
   <animation>
     <type>rotate</type>
     <object-name>roueA</object-name>
-    <property>surface-positions/rudder-pos-norm</property>
-    <factor> 25 </factor>
+    <!-- <property>gear/gear[0]/caster-angle-deg</property> -->
+    <property>sim/multiplay/generic/float[18]</property>
+    <factor> -0.6 </factor>
     <center>
       <x-m> -12.970 </x-m>
       <y-m>   0.000 </y-m>
@@ -947,7 +1021,8 @@
   <animation>
     <type>spin</type>
     <object-name>roueA</object-name>
-    <property>gear/gear[0]/rollspeed-ms</property>
+    <!-- <property>gear/gear[0]/rollspeed-ms</property> -->
+    <property>sim/multiplay/generic/float[8]</property>
     <factor> 30 </factor>
     <center>
       <x-m> -12.970 </x-m>
@@ -964,7 +1039,8 @@
   <animation>
     <type>spin</type>
     <object-name>roueG1</object-name>
-    <property>gear/gear[1]/rollspeed-ms</property>
+    <!-- <property>gear/gear[1]/rollspeed-ms</property> -->
+    <property>sim/multiplay/generic/float[9]</property>
     <factor> 30 </factor>
     <center>
       <x-m> -3.266 </x-m>
@@ -981,7 +1057,8 @@
   <animation>
     <type>spin</type>
     <object-name>roueG2</object-name>
-    <property>gear/gear[2]/rollspeed-ms</property>
+    <!-- <property>gear/gear[2]/rollspeed-ms</property> -->
+    <property>sim/multiplay/generic/float[10]</property>
     <factor> 30 </factor>
     <center>
       <x-m> -1.702 </x-m>
@@ -998,7 +1075,8 @@
   <animation>
     <type>spin</type>
     <object-name>roueD1</object-name>
-    <property>gear/gear[3]/rollspeed-ms</property>
+    <!-- <property>gear/gear[3]/rollspeed-ms</property> -->
+    <property>sim/multiplay/generic/float[11]</property>
     <factor> 30 </factor>
     <center>
       <x-m> -3.266 </x-m>
@@ -1015,7 +1093,8 @@
   <animation>
     <type>spin</type>
     <object-name>roueD2</object-name>
-    <property>gear/gear[4]/rollspeed-ms</property>
+    <!-- <property>gear/gear[4]/rollspeed-ms</property> -->
+    <property>sim/multiplay/generic/float[12]</property>
     <factor> 30 </factor>
     <center>
       <x-m> -1.702 </x-m>
@@ -1044,11 +1123,12 @@
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>baieB</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
+    <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+    <property>sim/multiplay/generic/float[1]</property>
     <factor> 40 </factor>
     <center>
       <x-m>  2.518 </x-m>
@@ -1065,7 +1145,8 @@
   <animation>
     <type>rotate</type>
     <object-name>baieH</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
+    <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+    <property>sim/multiplay/generic/float[1]</property>
     <factor> 20 </factor>
     <center>
       <x-m> 10.735 </x-m>
@@ -1079,70 +1160,21 @@
     </axis>
   </animation>
 
-  <!-- Effets lumineux -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/beacon.xml</path>
-    <offsets>
-      <x-m> 13.012 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  5.941 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/beacon.xml</path>
-    <offsets>
-      <x-m> -2.815 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m> -0.597 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/RedLight.xml</path>
-    <offsets>
-      <x-m>  -2.727 </x-m>
-      <y-m> -20.058 </y-m>
-      <z-m>  -0.035 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/StrobeLight.xml</path>
-    <offsets>
-      <x-m>  -2.737 </x-m>
-      <y-m> -20.058 </y-m>
-      <z-m>  -0.035 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/GreenLight.xml</path>
-    <offsets>
-      <x-m> -2.727 </x-m>
-      <y-m> 20.058 </y-m>
-      <z-m> -0.035 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/StrobeLight.xml</path>
-    <offsets>
-      <x-m> -2.737 </x-m>
-      <y-m> 20.058 </y-m>
-      <z-m> -0.035 </z-m>
-   </offsets>
-  </model>
-
-  <!-- Wing light cone right -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/light/light-cone.xml</path>
-    <offsets>
-      <x-m>       -4.285 </x-m>
-      <y-m>       11.207 </y-m>
-      <z-m>       -0.643 </z-m>
-      <pitch-deg> -7.500 </pitch-deg>
-    </offsets>
-  </model>
+  <!-- RADAR -->
+  <animation>
+    <type>translate</type>
+    <object-name>Radar</object-name>
+    <!-- <property>sim/model/door-positions/radar/position-norm</property> -->
+    <property>sim/multiplay/generic/float[0]</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0.0 </dep></entry>
+      <entry><ind> 1 </ind><dep> -1.1 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
 
 </PropertyList>

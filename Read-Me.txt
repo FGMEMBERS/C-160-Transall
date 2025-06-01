@@ -1,0 +1,81 @@
+English/Français
+
+[English]
+----------
+
+A little history
+================
+
+C-160 Transall
+==============
+
+Manufacturer                  :
+Type                          :
+Year                          :
+Powerplant                    :
+Wingspan                      :
+Length                        :
+Height                        :
+Empty weight                  :
+Cruise speed                  :
+Crew                          :
+
+Some useful keys:
+=================
+
+Thanks
+======
+
+===============
+BARANGER Emmanuel
+December, 10, 2009
+January,  11, 2020
+January,  24, 2021
+May,      23, 2022
+May,      24, 2022
+March,    10, 2025
+June,     01, 2025
+
+http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
+embaranger@gmail.com
+
+[Français]
+----------
+
+Un peu d'histoire
+=================
+
+C-160 Transall
+==============
+
+Constructeur                  :
+Type                          :
+Année                         :
+Moteur                        :
+Envergure                     :
+Longueur                      :
+Hauteur                       :
+Masse à vide                  :
+Vitesse de croisière          :
+Equipage                      :
+
+Quelques touches utiles :
+=========================
+
+Remerciements
+=============
+
+===============
+BARANGER Emmanuel
+10 Decembre 2009
+11 Janvier  2020
+24 Janvier  2021
+23 Mai      2022
+24 Mai      2022
+10 Mars     2025
+01 Juin     2025
+
+http://helijah.free.fr/flightgear/hangar.htm
+http://embaranger.free.fr
+embaranger@gmail.com

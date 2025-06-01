@@ -3,9 +3,9 @@
 <PropertyList>
 
   <setting> 0.00 </setting>
-  <setting> 0.25 </setting>
-  <setting> 0.50 </setting>
-  <setting> 0.75 </setting>
-  <setting> 1.00 </setting>
+  <setting> 0.25 </setting> <!-- 20 deg -->
+  <setting> 0.50 </setting> <!-- 30 deg -->
+  <setting> 0.75 </setting> <!-- 40 deg -->
+  <setting> 1.00 </setting> <!-- 60 deg -->
   
 </PropertyList>

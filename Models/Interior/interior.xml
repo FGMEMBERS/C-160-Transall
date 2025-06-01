@@ -12,118 +12,59 @@
     <object-name>intbaieH</object-name>
     <object-name>planchet</object-name>
     <object-name>paroie</object-name>
+    <object-name>support</object-name>
 
     <!-- Objets transparents -->
     <object-name>intvitres</object-name>
+    <!-- HDR mode -->
+    <object-name>HDRintvitres</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Effects/model-transparent</inherits-from>
+    <inherits-from>../Effects/Glass/glassrain</inherits-from>
     <object-name>intvitres</object-name>
   </effect>
-  
-  <!-- Pilote -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
-    <offsets>
-      <x-m> -13.404 </x-m>
-      <y-m>  -0.605 </y-m>
-      <z-m>  -2.659 </z-m>
-    </offsets>
-  </model>
 
-  <!-- Siege -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
-    <offsets>
-      <x-m> -13.515 </x-m>
-      <y-m>  -0.605 </y-m>
-      <z-m>  -2.725 </z-m>
-    </offsets>
-  </model>
+  <effect>
+    <inherits-from>../Effects/Glass/glass</inherits-from>
+    <object-name>HDRintvitres</object-name>
+  </effect>
 
-  <!-- Copilote -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
-    <offsets>
-      <x-m> -13.204 </x-m>
-      <y-m>   0.605 </y-m>
-      <z-m>  -2.659 </z-m>
-    </offsets>
-  </model>
+  <!-- Sélection des vitres en fonction de HDR ou pas -->
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <property>sim/rendering/hdr/hdr-enabled</property> -->
+      <property>sim/multiplay/generic/bool[2]</property>
+    </condition>
+    <object-name>HDRintvitres</object-name>
+  </animation>
 
-  <!-- Siege -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
-    <offsets>
-      <x-m> -13.291 </x-m>
-      <y-m>   0.605 </y-m>
-      <z-m>  -2.725 </z-m>
-    </offsets>
-  </model>
+  <animation>
+    <type>select</type>
+    <condition>
+      <!-- <not><property>sim/rendering/hdr/hdr-enabled</property></not> -->
+      <not><property>sim/multiplay/generic/bool[2]</property></not>
+    </condition>
+    <object-name>intvitres</object-name>
+  </animation>
 
-  <!-- Commandant -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
-    <offsets>
-      <x-m> -12.454 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -2.659 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Siege -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
-    <offsets>
-      <x-m> -12.547 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -2.725 </z-m>
-    </offsets>
-  </model>
-
-  <!-- Ingénieur -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Pilot/pilot.xml</path>
-    <offsets>
-      <x-m> -12.552 </x-m>
-      <y-m>   1.095 </y-m>
-      <z-m>  -2.659 </z-m>
-      <heading-deg> 180 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Siege -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/seat/seat.xml</path>
-    <offsets>
-      <x-m> -12.468 </x-m>
-      <y-m>   1.109 </y-m>
-      <z-m>  -2.725 </z-m>
-      <heading-deg> 180 </heading-deg>
-    </offsets>
-  </model>
-
-  <!-- Planche de bord -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/panel.xml</path>
-    <offsets>
-      <x-m> -14.212 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -2.706 </z-m>
-    </offsets>
+    <path>Panel/all-panels.xml</path>
   </model>
 
   <!-- Plafonnier -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/overhead/overhead.xml</path>
-    <offsets>
-      <x-m> -13.579 </x-m>
-      <y-m>   0.000 </y-m>
-      <z-m>  -1.686 </z-m>
-      <pitch-deg>   54.6 </pitch-deg>
-    </offsets>
+    <path>overhead/all-overheads.xml</path>
+  </model>
+
+  <model>
+    <path>../Pilot/all-pilots.xml</path>
+  </model>
+
+  <model>
+    <path>seat/all-seats.xml</path>
   </model>
 
   <!-- Portes cargo arriere -->
@@ -141,11 +82,12 @@
       </binding>
     </action>
   </animation>
-  
+
   <animation>
     <type>rotate</type>
     <object-name>intbaieB</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
+    <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+    <property>sim/multiplay/generic/float[1]</property>
     <factor> 40 </factor>
     <center>
       <x-m>  2.518 </x-m>
@@ -162,7 +104,8 @@
   <animation>
     <type>rotate</type>
     <object-name>intbaieH</object-name>
-    <property>sim/model/door-positions/passenger/position-norm</property>
+    <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+    <property>sim/multiplay/generic/float[1]</property>
     <factor> 20 </factor>
     <center>
       <x-m> 10.735 </x-m>

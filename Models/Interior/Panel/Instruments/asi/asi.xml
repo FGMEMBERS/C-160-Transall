@@ -12,21 +12,32 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <!-- working for Rembrandt -->
+  <animation>
+    <type>noshadow</type>
+    <object-name>ASIbezel</object-name>
+    <object-name>ASIface</object-name>
+    <object-name>ASIneedle</object-name>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <!-- working for Compositor -->
   <effect>
-    <inherits-from>Aircraft/C-160-Transall/Models/Effects/Glass/glass</inherits-from>
+    <inherits-from>../../../../Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
   </effect>
-  
+
   <animation>
     <type>material</type>
     <object-name>ASIface</object-name>
     <object-name>ASIneedle</object-name>
+    <condition>
+      <property>controls/electric/battery-switch</property>
+    </condition>
     <emission>
-      <red>   1.0 </red>
-      <green> 0.2 </green>
-      <blue>  0.0 </blue>
-      <factor-prop>/systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>controls/lighting/instruments-norm</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.40 </green>
+      <blue>  0.30 </blue>
     </emission>
   </animation>
 
@@ -36,7 +47,7 @@
     <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
     <interpolation>
       <entry><ind>   0 </ind><dep>   0 </dep></entry>
-      <entry><ind>  30 </ind><dep>   9 </dep></entry>   
+      <entry><ind>  30 </ind><dep>   9 </dep></entry>
       <entry><ind>  40 </ind><dep>  18 </dep></entry>
       <entry><ind>  60 </ind><dep>  36 </dep></entry>
       <entry><ind> 100 </ind><dep> 108 </dep></entry>

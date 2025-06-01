@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>propeller.ac</path>
+
+  <animation>
+    <object-name>pales</object-name>
+    <object-name>bol</object-name>
+
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propblur</object-name>
+    <object-name>propdisc</object-name>
+  </effect>
+
+  <!-- Sélection Pales/disque en fonction de "RPM" -->
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>14</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblur</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>60</value>
+        </greater-than>
+        <less-than>
+          <property>velocities/true-airspeed-kt</property>
+          <value>101</value>
+        </less-than>
+      </and>
+    </condition>
+  </animation>
+
+  <!-- Mise en place des pales par défaut -->
+  <animation>
+    <type>select</type>
+    <object-name>pales</object-name>
+    <condition>
+      <less-than>
+        <property>velocities/true-airspeed-kt</property>
+        <value>101</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- Rotation de l'hélice -->
+  <animation>
+    <name>helicecomplete</name>
+    <object-name>pales</object-name>
+    <object-name>bol</object-name>
+    <object-name>propdisc</object-name>
+    <object-name>propblur</object-name>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>helicecomplete</object-name>
+    <property>velocities/true-airspeed-kt</property>
+    <factor> 50 </factor>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>

@@ -10,7 +10,7 @@ data 12
 AttitudeBall
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 242
 -0.045734 0.046707 -0.000169
 -0.054321 0.045792 0.003389
@@ -2023,7 +2023,7 @@ data 4
 Fond
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 117
 0.004289 -0.041783 0.023764
 0.004289 -0.045779 0.01637
@@ -2699,7 +2699,7 @@ data 10
 SkyPointer
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 8
 -0.011707 0.043793 0.001284
 -0.011707 0.037244 0.001298
@@ -2753,7 +2753,7 @@ data 7
 ai-ring
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 56
 -0.012148 0.049305 0.050871
 -0.012148 0.049305 0.038069
@@ -3016,7 +3016,7 @@ data 10
 bank-index
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 6
 -0.000239 -0.027655 0.001969
 -0.000239 -0.027676 -0.001858
@@ -3060,7 +3060,7 @@ data 5
 barre
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 108
 0.003147 0.000711 0.002831
 0.003147 -0.002298 0.002831
@@ -3793,7 +3793,7 @@ data 6
 barre1
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 8
 -0.011707 0.040042 -0.0274
 -0.011707 0.03318 -0.022881
@@ -3847,7 +3847,7 @@ data 6
 barre2
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 10
 -0.013757 -0.00097 -0
 -0.011707 0.040042 0.027306
@@ -3903,7 +3903,7 @@ data 6
 bouton
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 81
 0.015964 -0.040765 -0.038152
 0.009207 -0.040765 -0.028033
@@ -4395,7 +4395,7 @@ data 11
 course-flag
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 8
 -0.011232 0.042071 0.006472
 -0.011232 0.045809 0.009383
@@ -4449,7 +4449,7 @@ data 8
 gs-scale
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 4
 -0.002049 -0.050395 0.040531
 -0.002049 -0.050396 0.047364
@@ -4471,7 +4471,7 @@ data 8
 ils-flag
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 8
 -0.002174 0.006494 0.035678
 -0.002174 0.006494 0.040282
@@ -4525,7 +4525,7 @@ data 21
 nav-pitch-steering-ba
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 8
 0.003557 0.031649 0.000477
 0.003557 0.031649 -0.000477
@@ -4579,7 +4579,7 @@ data 20
 nav-yaw-steering-bar
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 8
 0.003557 -0.000411 0.029626
 0.003557 -0.001528 0.029626
@@ -4633,7 +4633,7 @@ data 9
 ring-slip
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 26
 -0.001247 -0.048847 -0.046918
 -0.001247 -0.048848 -0.039979
@@ -4754,7 +4754,7 @@ data 9
 slip-ball
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 22
 0.000109 -0.048135 -0.000045
 0.001715 -0.04766 -0.000045
@@ -4911,7 +4911,7 @@ data 6
 visses
 texture "ai.png"
 texrep 1.000000 1.000000
-crease 180.000005
+crease 30.000001
 numvert 132
 0.006538 0.048737 0.049243
 0.006398 0.048737 0.048117
