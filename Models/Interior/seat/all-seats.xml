@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -13.515 </x-m>
+      <y-m>  -0.605 </y-m>
+      <z-m>  -2.725 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -13.291 </x-m>
+      <y-m>   0.605 </y-m>
+      <z-m>  -2.725 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -12.547 </x-m>
+      <y-m>   0.000 </y-m>
+      <z-m>  -2.725 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>seat.xml</path>
+    <offsets>
+      <x-m> -12.468 </x-m>
+      <y-m>   1.109 </y-m>
+      <z-m>  -2.725 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>

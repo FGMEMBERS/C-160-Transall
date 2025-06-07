@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim>
+
+    <model>
+      <shader-effect type="bool">true</shader-effect>
+      <livery>
+        <name type="string">59 ans</name>
+        <texture>Liveries/4096x4096/59ans.png</texture>
+        <specular>
+          <red>   0.3 </red>
+          <green> 0.3 </green>
+          <blue>  0.3 </blue>
+        </specular>
+      </livery>
+      <livery-propellers>
+        <texture>Liveries/Propellers/59ans.png</texture>
+        <specular>
+          <red>   0.3 </red>
+          <green> 0.3 </green>
+          <blue>  0.3 </blue>
+        </specular>
+      </livery-propellers>
+    </model>
+
+  </sim>
+
+</PropertyList>

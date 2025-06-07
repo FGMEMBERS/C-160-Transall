@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <scenario>
+
+    <name>alphajet Wingman</name>
+
+    <description>diamant</description>
+
+    <entry>
+      <name>1-Leader</name>
+      <type>wingman</type>
+      <number>1</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -90 </x-offset>
+      <y-offset>   0 </y-offset>
+      <z-offset>   0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+    <entry>
+      <name>2-interior-right</name>
+      <type>wingman</type>
+      <number>2</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -120 </x-offset>
+      <y-offset>   30 </y-offset>
+      <z-offset>    0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+    <entry>
+      <name>3-interior-left</name>
+      <type>wingman</type>
+      <number>3</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -120 </x-offset>
+      <y-offset>  -30 </y-offset>
+      <z-offset>    0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+    <entry>
+      <name>4-charognard</name>
+      <type>wingman</type>
+      <number>4</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -150 </x-offset>
+      <y-offset>    0 </y-offset>
+      <z-offset>    0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+    <entry>
+      <name>5-Exterior-left</name>
+      <type>wingman</type>
+      <number>5</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -150 </x-offset>
+      <y-offset>  -60 </y-offset>
+      <z-offset>    0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+    <entry>
+      <name>6-Exterior-right</name>
+      <type>wingman</type>
+      <number>6</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -150 </x-offset>
+      <y-offset>   60 </y-offset>
+      <z-offset>    0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+    <entry>
+      <name>7-Leader-Solo</name>
+      <type>wingman</type>
+      <number>7</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -150 </x-offset>
+      <y-offset>  -30 </y-offset>
+      <z-offset>    0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+    <entry>
+      <name>8-Second-Solo</name>
+      <type>wingman</type>
+      <number>8</number>
+      <model>Aircraft/Alphajet/Models/Wingman/alphajet-wingman-paf.xml</model>
+      <x-offset> -180 </x-offset>
+      <y-offset>   30 </y-offset>
+      <z-offset>    0 </z-offset>
+      <ground-offset>-1.0</ground-offset>
+      <formate>true</formate>
+      <max-speed-kts>600</max-speed-kts>
+      <coefficients>
+        <heading> 3.0 </heading>
+        <pitch>   2.0 </pitch>
+        <bank>    2.0 </bank>
+        <speed>   2.0 </speed>
+      </coefficients>
+    </entry>
+
+  </scenario>
+
+</PropertyList>

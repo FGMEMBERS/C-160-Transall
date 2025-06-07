@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-  
+
   <keyboard>
-    
+
+    <key n="100">
+      <name>d</name>
+      <desc>Crew door</desc>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </key>
+
     <key n="68">
       <name>D</name>
       <desc>Cargo door</desc>
@@ -12,25 +21,196 @@
         <script>doors.passenger.toggle();</script>
       </binding>
     </key>
-    <!--    
-    <key n="125">
-      <name>}</name>
-      <desc>Engine Autostart</desc>
-      <binding>
-        <command>nasal</command>
-        <script>engines.autostart();</script>
-      </binding>
-    </key>
-    -->
+
     <key n="108">
       <name>l</name>
       <desc>Landing light</desc>
       <binding>
         <command>property-toggle</command>
-        <property>controls/switches/landing-light</property>
+        <!-- <property>controls/lighting/landing-lights</property> -->
+        <property>sim/multiplay/generic/bool[16]</property>
       </binding>
     </key>
-    
+
+    <key n="114">
+      <name>r</name>
+      <desc>Radar OUT/IN</desc>
+      <binding>
+        <command>nasal</command>
+        <script>doors.radar.toggle();</script>
+      </binding>
+    </key>
+
+    <key n="74">
+      <name>Shift j</name>
+      <desc>Jump signal</desc>
+      <binding>
+        <condition>
+          <equals>
+            <!-- <property>sim/model/door-positions/passenger/position-norm</property> -->
+            <property>sim/multiplay/generic/float[1]</property>
+            <value>1</value>
+          </equals>
+        </condition>
+        <command>property-toggle</command>
+        <!-- <property>controls/jump-signal</property> -->
+        <property>sim/multiplay/generic/bool[0]</property>
+      </binding>
+    </key>
+
+    <key n="127">
+      <name>Delete</name>
+      <desc>Toggle Reversers</desc>
+      <binding>
+        <command>property-toggle</command>
+        <!-- <property>controls/engines/engine[0]/reverser</property> -->
+        <property>sim/multiplay/generic/bool[17]</property>
+      </binding>
+      <binding>
+        <command>nasal</command>
+        <script>
+          # setprop("controls/engines/engine[0]/propeller-pitch",0);
+          setprop("sim/multiplay/generic/float[17]",0);
+          # setprop("controls/engines/engine[1]/propeller-pitch",0);
+          setprop("sim/multiplay/generic/float[18]",0);
+        </script>
+      </binding>
+    </key>
+
+    <key n="81">
+      <name>Q</name>
+      <desc>Reset view</desc>
+      <binding>
+        <command>nasal</command>
+        <script>
+          setprop("sim/current-view/field-of-view",      getprop("sim/current-view/config/default-field-of-view-deg"));
+          setprop("sim/current-view/heading-offset-deg", getprop("sim/current-view/config/heading-offset-deg"));
+          setprop("sim/current-view/pitch-offset-deg",   getprop("sim/current-view/config/pitch-offset-deg"));
+          setprop("sim/current-view/roll-offset-deg",    getprop("sim/current-view/config/roll-offset-deg"));
+        </script>
+      </binding>
+    </key>
+
+    <key n="125">
+      <name>}</name>
+      <desc>AutoStart/AutoStart</desc>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/battery-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/engine/generator</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/instrument-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/nav-lights</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/beacon</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/strobe</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/starterkey-insert</property>
+      </binding>
+      <!-- Magnetos ON -->
+      <binding>
+        <condition>
+          <property>controls/switches/starterkey-insert</property>
+        </condition>
+        <command>property-assign</command>
+        <property>controls/engines/engine[0]/magnetos</property>
+        <value>3</value>
+      </binding>
+      <binding>
+        <condition>
+          <property>controls/switches/starterkey-insert</property>
+        </condition>
+        <command>property-assign</command>
+        <property>controls/engines/engine[1]/magnetos</property>
+        <value>3</value>
+      </binding>
+      <binding>
+        <condition>
+          <property>controls/switches/starterkey-insert</property>
+        </condition>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[0]/selected</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <condition>
+          <property>controls/switches/starterkey-insert</property>
+        </condition>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[1]/selected</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <condition>
+          <property>controls/switches/starterkey-insert</property>
+        </condition>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[2]/selected</property>
+        <value>true</value>
+      </binding>
+      <!-- Magnetos OFF -->
+      <binding>
+        <condition>
+          <not><property>controls/switches/starterkey-insert</property></not>
+        </condition>
+        <command>property-assign</command>
+        <property>controls/engines/engine[0]/magnetos</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <condition>
+          <not><property>controls/switches/starterkey-insert</property></not>
+        </condition>
+        <command>property-assign</command>
+        <property>controls/engines/engine[1]/magnetos</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <condition>
+          <not><property>controls/switches/starterkey-insert</property></not>
+        </condition>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[0]/selected</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <condition>
+          <not><property>controls/switches/starterkey-insert</property></not>
+        </condition>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[1]/selected</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <condition>
+          <not><property>controls/switches/starterkey-insert</property></not>
+        </condition>
+        <command>property-assign</command>
+        <property>consumables/fuel/tank[2]/selected</property>
+        <value>false</value>
+      </binding>
+      <!-- ********************************************** -->
+      <binding>
+        <command>nasal</command>
+        <script>engines.autostart();</script>
+      </binding>
+    </key>
+
   </keyboard>
-  
+
 </PropertyList>

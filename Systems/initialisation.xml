@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <airspeed-indicator>
+    <name>airspeed-indicator</name>
+    <number>0</number>
+    <pitot-port>/systems/pitot[0]</pitot-port>
+    <static-port>/systems/static[0]</static-port>
+    <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  </airspeed-indicator>
+
+  <airspeed-indicator>
+    <name>airspeed-indicator</name>
+    <number>1</number>
+    <pitot-port>/systems/pitot[1]</pitot-port>
+    <static-port>/systems/static[0]</static-port>
+    <total-pressure>/systems/pitot/total-pressure-inhg</total-pressure>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  </airspeed-indicator>
+
+  <altimeter>
+    <name>altimeter</name>
+    <number>0</number>
+    <static-port>/systems/static</static-port>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    <quantum>0</quantum>
+    <tau>0</tau>
+  </altimeter>
+
+  <!-- attitude indicators 0-pilot, 1-copilot, 2-stby -->
+  <attitude-indicator>
+    <name>attitude-indicator</name>
+    <number>0</number>
+    <electrical-input>/systems/electrical/outputs/attitude-indicator-gyro[0]</electrical-input>
+  </attitude-indicator>
+
+  <attitude-indicator>
+    <name>attitude-indicator</name>
+    <number>1</number>
+    <electrical-input>/systems/electrical/outputs/attitude-indicator-gyro[1]</electrical-input>
+  </attitude-indicator>
+
+  <attitude-indicator>
+    <name>attitude-indicator</name>
+    <number>2</number>
+    <electrical-input>/systems/electrical/outputs/attitude-indicator-gyro[2]</electrical-input>
+  </attitude-indicator>
+
+  <magnetic-compass>
+    <name>magnetic-compass</name>
+    <number>0</number>
+  </magnetic-compass>
+
+  <altimeter>
+    <name>encoder</name>
+    <number>0</number>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+    <quantum>10</quantum>
+    <tau>0.1</tau>
+  </altimeter>
+
+  <slip-skid-ball>
+    <name>slip-skid-ball</name>
+    <number>0</number>
+  </slip-skid-ball>
+
+  <vertical-speed-indicator>
+    <name>vertical-speed-indicator</name>
+    <number>0</number>
+    <static-port>/systems/static</static-port>
+    <static-pressure>/systems/static/pressure-inhg</static-pressure>
+  </vertical-speed-indicator>
+
+  <heading-indicator>
+    <name>heading-indicator</name>
+    <number>0</number>
+    <suction>/systems/vacuum/suction-inhg</suction>
+    <electrical-input>/systems/electrical/outputs/turn-indicator[0]</electrical-input>
+  </heading-indicator>
+
+  <heading-indicator>
+    <name>heading-indicator</name>
+    <number>1</number>
+    <suction>/systems/vacuum/suction-inhg</suction>
+    <electrical-input>/systems/electrical/outputs/turn-indicator[1]</electrical-input>
+  </heading-indicator>
+
+  <!-- Turn indicators 0-pilot, 1-copilot -->
+  <turn-indicator>
+    <name>turn-indicator</name>
+    <number>0</number>
+    <electrical-input>/systems/electrical/outputs/turn-indicator[0]</electrical-input>
+  </turn-indicator>
+
+  <turn-indicator>
+    <name>turn-indicator</name>
+    <number>1</number>
+    <electrical-input>/systems/electrical/outputs/turn-indicator[1]</electrical-input>
+  </turn-indicator>
+
+  <marker-beacon>
+    <name>marker-beacon</name>
+    <number>0</number>
+    <electrical-input>/systems/electrical/outputs/marker[0]</electrical-input>
+  </marker-beacon>
+
+  <comm-radio>
+    <name>comm</name>
+    <number>0</number>
+  </comm-radio>
+
+  <!-- nav radios (NAV1 = KFS584 / NAV2 = KNS81) -->
+  <nav-radio>
+    <name>nav</name>
+    <number>0</number>
+    <electrical-input>/systems/electrical/outputs/nav[0]</electrical-input>
+  </nav-radio>
+
+  <nav-radio>
+    <name>nav</name>
+    <number>1</number>
+    <electrical-input>/systems/electrical/outputs/nav[1]</electrical-input>
+  </nav-radio>
+
+  <!-- dme radios (DME[1] is connected to NAV2 for RNAV mode) -->
+  <dme>
+    <name>dme</name>
+    <number>0</number>
+    <electrical-input>/systems/electrical/outputs/dme[0]</electrical-input>
+  </dme>
+
+  <dme>
+    <name>dme</name>
+    <number>1</number>
+    <electrical-input>/systems/electrical/outputs/dme[1]</electrical-input>
+  </dme>
+
+  <gps>
+    <name>gps</name>
+    <number>0</number>
+  </gps>
+
+  <heading-indicator>
+    <name>heading-indicator</name>
+    <number>0</number>
+    <electrical-input>/systems/electrical/outputs/heading-indicator-gyro[0]</electrical-input>
+  </heading-indicator>
+
+  <heading-indicator>
+    <name>heading-indicator</name>
+    <number>1</number>
+    <electrical-input>/systems/electrical/outputs/heading-indicator-gyro[1]</electrical-input>
+  </heading-indicator>
+
+  <KT-70>
+    <name>kt-70</name>
+    <number>0</number>
+  </KT-70>
+
+  <adf>
+    <name              type="string">adf</name>
+    <number            type="int">0</number>
+    <frequencies>
+      <name            type="string">adf</name>
+      <digit           n="0">0</digit>
+      <digit           n="1">0</digit>
+      <digit           n="2">0</digit>
+      <digit           n="3">0</digit>
+    </frequencies>
+    <volume-norm       type="double">0</volume-norm>
+    <power-btn         type="bool" >false</power-btn>
+    <electrical-input>/systems/electrical/outputs/adf[0]</electrical-input>
+  </adf>
+
+  <adf>
+    <name              type="string">adf</name>
+    <number            type="int">1</number>
+    <frequencies>
+      <name            type="string">adf</name>
+      <digit           n="0">0</digit>
+      <digit           n="1">0</digit>
+      <digit           n="2">0</digit>
+      <digit           n="3">0</digit>
+    </frequencies>
+    <volume-norm       type="double">0</volume-norm>
+    <power-btn         type="bool" >false</power-btn>
+    <electrical-input>/systems/electrical/outputs/adf[1]</electrical-input>
+  </adf>
+
+  <slip-skid-ball>
+    <name>slip-skid-ball</name>
+    <number>0</number>
+  </slip-skid-ball>
+
+  <transponder>
+    <name               type="string">transponder</name>
+    <number             type="int">0</number>
+    <inputs>
+      <mode             type="int">1</mode> <!-- 0 = Mode A, 1 = Mode C, 2 = Mode S -->
+    </inputs>
+    <bus-volts          type="double">8.0</bus-volts>
+    <encoder-path       type="string">/instrumentation/encoder</encoder-path>
+    <kt70-compatibility type="bool">1</kt70-compatibility>
+  </transponder>
+
+</PropertyList>

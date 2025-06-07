@@ -9,13 +9,13 @@
     <!-- Objets opaques -->
     <object-name>panel1</object-name>
     <object-name>panel2</object-name>
-    
+
     <!-- Objets transparents -->
   </animation>
 
   <!-- ai -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <path>Instruments/ai/ai.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m> -0.656 </y-m>
@@ -24,7 +24,7 @@
   </model>
 
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/ai/ai.xml</path>
+    <path>Instruments/ai/ai.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.656 </y-m>
@@ -34,26 +34,26 @@
 
   <!-- alt -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <path>Instruments/alt/alt.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m> -0.553 </y-m>
       <z-m>  0.078 </z-m>
     </offsets>
   </model>
-  
+
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <path>Instruments/alt/alt.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.553 </y-m>
       <z-m> 0.078 </z-m>
     </offsets>
   </model>
-  
+
   <!-- asi -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <path>Instruments/asi/asi.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m> -0.759 </y-m>
@@ -62,7 +62,7 @@
   </model>
 
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <path>Instruments/asi/asi.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.759 </y-m>
@@ -70,104 +70,133 @@
     </offsets>
   </model>
 
-  <!-- NAV LIGHT -->
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
-    <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m> -0.534 </y-m>
-      <z-m>  0.221 </z-m>
-    </offsets>
-  </model>
-  
-  <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/landing-lights.xml</path>
-    <offsets>
-      <x-m> 0.000 </x-m>
-      <y-m> 0.534 </y-m>
-      <z-m> 0.221 </z-m>
-    </offsets>
-  </model>
-  
   <!-- Gear manette -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
+    <path>Instruments/divers/gears.xml</path>
     <offsets>
       <x-m> -0.200 </x-m>
       <y-m> -0.374 </y-m>
       <z-m>  0.046 </z-m>
     </offsets>
   </model>
-  
+
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/divers/gears.xml</path>
+    <path>Instruments/divers/gears.xml</path>
     <offsets>
       <x-m> -0.200 </x-m>
       <y-m>  0.374 </y-m>
       <z-m>  0.046 </z-m>
     </offsets>
   </model>
-  
-  <!-- HIS -->
+
+  <!-- HSI -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <path>Instruments/hsi/hsi.xml</path>
     <offsets>
       <x-m>  0.003 </x-m>
       <y-m> -0.656 </y-m>
       <z-m> -0.020 </z-m>
     </offsets>
   </model>
-  
+
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/hsi/hsi.xml</path>
+    <path>Instruments/hsi/hsi.xml</path>
     <offsets>
       <x-m>  0.003 </x-m>
       <y-m>  0.656 </y-m>
       <z-m> -0.020 </z-m>
     </offsets>
   </model>
-  
+
+  <!-- ITT -->
+  <model>
+    <path>Instruments/Itt/itt1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.050 </y-m>
+      <z-m>  0.260 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Instruments/Itt/itt2.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.041 </y-m>
+      <z-m> 0.260 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Map -->
+  <model>
+    <path>Instruments/map/map.xml</path>
+    <offsets>
+      <x-m>  0.00008 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.02446 </z-m>
+    </offsets>
+  </model>
+
   <!-- Oil -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil0.xml</path>
+    <path>Instruments/oil/oil0.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m> -0.049 </y-m>
       <z-m>  0.150 </z-m>
     </offsets>
   </model>
-  
+
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/oil/oil1.xml</path>
+    <path>Instruments/oil/oil1.xml</path>
     <offsets>
       <x-m> 0.000 </x-m>
       <y-m> 0.041 </y-m>
       <z-m> 0.150 </z-m>
     </offsets>
   </model>
-  
+
   <!-- Temperature -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/temp/temp0.xml</path>
+    <path>Instruments/temp/temp0.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m> -0.231 </y-m>
       <z-m> -0.008 </z-m>
     </offsets>
   </model>
-  
+
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/temp/temp1.xml</path>
+    <path>Instruments/temp/temp1.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m> -0.142 </y-m>
       <z-m> -0.008 </z-m>
     </offsets>
   </model>
-  
+
+  <!-- Torque -->
+  <model>
+    <path>Instruments/torque/torq1.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.240 </y-m>
+      <z-m>  0.260 </z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Instruments/torque/torq2.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m> -0.150 </y-m>
+      <z-m>  0.260 </z-m>
+    </offsets>
+  </model>
+
   <!-- vsi -->
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <path>Instruments/vsi/vsi.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m> -0.549 </y-m>
@@ -176,7 +205,7 @@
   </model>
 
   <model>
-    <path>Aircraft/C-160-Transall/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <path>Instruments/vsi/vsi.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m>  0.549 </y-m>
@@ -185,4 +214,3 @@
   </model>
 
 </PropertyList>
-

@@ -1,40 +1,77 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<PropertyList include="Systems/c160-base.xml">
- 
+<PropertyList   include="Systems/c160-base.xml">
+
   <sim>
 
     <description>C 160 Transall (YASim)</description>
-    <author>BARANGER Emmanuel</author>
+    <author>BARANGER Emmanuel (3D/FDM)</author>
 
-    <aircraft-version>0.2</aircraft-version>
+    <aircraft-version>0.6</aircraft-version>
     <status>Alpha</status>
+    <minimum-fg-version>2018.2.0</minimum-fg-version>
 
     <flight-model>yasim</flight-model>
     <aero>Systems/c160-yasim</aero>
 
+    <model>
+      <mode     type="string">TRANSAL</mode>
+    </model>
+
     <rating>
-      <FDM type="int">     3 </FDM>
-      <systems type="int"> 0 </systems>
-      <cockpit type="int"> 1 </cockpit>
-      <model type="int">   4 </model>
+      <FDM      type="int"> 4 </FDM>
+      <systems  type="int"> 2 </systems>
+      <cockpit  type="int"> 2 </cockpit>
+      <model    type="int"> 4 </model>
     </rating>
+
+    <previews>
+      <preview>
+        <type>cockpit</type>
+        <path>Previews/C160-0.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <path>Previews/C160-1.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <path>Previews/C160-2.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+      <preview>
+        <type>cockpit</type>
+        <path>Previews/C160-3.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+      <preview>
+        <type>exterior</type>
+        <path>Previews/C160-4.png</path>
+        <splash type="bool">true</splash>
+      </preview>
+    </previews>
 
     <tags>
       <tag>transport</tag>
-      <tag>fokker</tag>
-      <tag>messerschmitt</tag>
+      <tag>Nord-Aviation</tag>
+      <tag>Weser Flugzeugbau</tag>
+      <tag>Hamburger Flugzeugbau</tag>
       <tag>1960s</tag>
       <tag>1970s</tag>
       <tag>1980s</tag>
       <tag>1990s</tag>
       <tag>2000s</tag>
       <tag>2010s</tag>
+      <tag>2020s</tag>
       <tag>high-wing</tag>
       <tag>retractable-gear</tag>
       <tag>ifr</tag>
       <tag>turboprop</tag>
       <tag>twin-engine</tag>
+      <tag>compositor</tag>
+      <tag>HDR</tag>
     </tags>
 
   </sim>
